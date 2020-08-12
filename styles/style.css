@@ -1,1 +1,21 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/*
+    Global variables and functions
+*/
+/*
+    Imports
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*
+    Media Querrys
+*/
+/*# sourceMappingURL=style.css.map */

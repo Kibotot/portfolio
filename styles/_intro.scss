@@ -1,0 +1,45 @@
+main {
+  font-family: regular;
+  min-height: 60vh;
+  width: 60%;
+  margin: auto;
+}
+
+.main-box {
+  width: 100%;
+  position: relative;
+}
+.main-inner {
+  position: absolute;
+  //   background-color: chocolate;
+  min-height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  @include flex(flex-start, center, column);
+  .hello {
+    font-size: 2rem;
+    font-family: regular;
+    color: map-get($color, "white");
+  }
+  .name {
+    font-family: heavy;
+    font-size: 7.2rem;
+    letter-spacing: 0.07rem;
+    color: map-get($color, "primary");
+  }
+  .about {
+    font-family: heavy;
+    font-size: 7.2rem;
+    letter-spacing: 0.07rem;
+    color: map-get($color, "secondary");
+  }
+  .description {
+    letter-spacing: 0.1rem;
+    width: 45%;
+    font-size: 1.6rem;
+    font-family: slanted;
+    color: map-get($color, "white");
+    padding: 2rem 0;
+  }
+}

@@ -1,0 +1,23 @@
+.links {
+  min-height: 10vh;
+  position: fixed;
+  top: 50%;
+  left: 5vw;
+  transform: translate(-50%, -50%);
+  .links-inner {
+    @include flex(center, center, column);
+    svg {
+      opacity: 0.7;
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 2rem 0rem;
+      transition: 0.2s ease-in-out all;
+      &:hover {
+        opacity: 1;
+        path {
+          fill: map-get($color, "primary");
+        }
+      }
+    }
+  }
+}

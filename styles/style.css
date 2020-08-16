@@ -33,10 +33,15 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #000000;
+  background-image: url(../img/bg-lines.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 #logo {
@@ -49,8 +54,20 @@ body {
           animation: fill 0.5s ease-in forwards 2.6s;
 }
 
-svg {
-  width: 30vw;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f0a500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cf7500;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
 }
 
 #logo path:nth-child(1) {
@@ -183,7 +200,7 @@ nav {
       -ms-flex-direction: "row";
           flex-direction: "row";
   min-height: 10vh;
-  width: 90%;
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -216,7 +233,122 @@ nav {
 
 @-webkit-keyframes buttonHover {}
 
-@keyframes buttonHover {}/*
-    Media Querrys
-*/
+@keyframes buttonHover {}main {
+  font-family: regular;
+  min-height: 60vh;
+  width: 60%;
+  margin: auto;
+}
+
+.main-box {
+  width: 100%;
+  position: relative;
+}
+
+.main-inner {
+  position: absolute;
+  min-height: 60vh;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-inner .hello {
+  font-size: 2rem;
+  font-family: regular;
+  color: #f4f4f4;
+}
+
+.main-inner .name {
+  font-family: heavy;
+  font-size: 7.2rem;
+  letter-spacing: 0.07rem;
+  color: #f0a500;
+}
+
+.main-inner .about {
+  font-family: heavy;
+  font-size: 7.2rem;
+  letter-spacing: 0.07rem;
+  color: #cf7500;
+}
+
+.main-inner .description {
+  letter-spacing: 0.1rem;
+  width: 45%;
+  font-size: 1.6rem;
+  font-family: slanted;
+  color: #f4f4f4;
+  padding: 2rem 0;
+}
+
+.work {
+  min-height: 140vh;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #474716;
+}
+
+.work h1 {
+  font-size: 35rem;
+  font-family: heavy;
+  color: white;
+  -webkit-transform: rotateZ(90deg) translate(50%, -25%);
+          transform: rotateZ(90deg) translate(50%, -25%);
+}
+
+.links {
+  min-height: 10vh;
+  position: fixed;
+  top: 50%;
+  left: 5vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.links .links-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.links .links-inner svg {
+  opacity: 0.7;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 2rem 0rem;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+.links .links-inner svg:hover {
+  opacity: 1;
+}
+
+.links .links-inner svg:hover path {
+  fill: #f0a500;
+}
 /*# sourceMappingURL=style.css.map */

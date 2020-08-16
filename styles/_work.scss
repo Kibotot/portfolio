@@ -1,0 +1,12 @@
+.work {
+  min-height: 140vh;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(71, 71, 22);
+  h1 {
+    font-size: 35rem;
+    font-family: heavy;
+    color: white;
+    transform: rotateZ(90deg) translate(50%, -25%);
+  }
+}

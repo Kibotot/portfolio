@@ -1,9 +1,7 @@
 .work {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 60%;
-  margin: 10rem auto;
-  overflow-x: visible;
-  //   background-color: rgb(71, 71, 22);
+  margin: 5rem auto;
   font-family: heavyslanted;
 }
 
@@ -12,7 +10,7 @@
   .work-title {
     @include flex(flex-start, flex-start);
     margin-bottom: 5rem;
-    font-size: 7.2rem;
+    font-size: 5.3125vw;
     .work-title-1 {
       color: map-get($color, "white");
     }
@@ -27,7 +25,6 @@
   }
   .project {
     min-height: 15vh;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,12 +37,13 @@
       font-size: 5.2rem;
       letter-spacing: 0.1rem;
       cursor: pointer;
+      position: relative;
     }
     h1 a:hover {
       color: map-get($color, "primary");
     }
-    img {
-      width: 170%;
+    .stripes {
+      width: 100%;
       position: absolute;
       overflow: visible;
       z-index: -2;

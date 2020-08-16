@@ -1,0 +1,28 @@
+.aboutSection {
+  min-height: 60vh;
+  font-family: regular;
+}
+
+.aboutSection-container {
+  @include flex(flex-start, center, column);
+  min-height: 60vh;
+  width: 80%;
+  margin: 5rem auto;
+  color: map-get($color, "white");
+  .aboutSection-title {
+    position: relative;
+    #aboutSection-title {
+      font-family: heavy;
+      font-size: 5.3125vw;
+    }
+    h1 span {
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      z-index: -2;
+      font-size: 9.3125vw;
+      color: map-get($color, "primary");
+      opacity: 0.2;
+    }
+  }
+}

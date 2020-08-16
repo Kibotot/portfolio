@@ -1,11 +1,41 @@
 /*
     Global variables and functions
 */
+$color: (
+  "black": #000000,
+  "white": #f4f4f4,
+  "primary": #f0a500,
+  "secondary": #cf7500,
+);
 
+@font-face {
+  font-family: "regular";
+  src: url(../fonts/ObjectSans/ObjectSans-Regular.otf);
+}
+@font-face {
+  font-family: "slanted";
+  src: url(../fonts/ObjectSans/ObjectSans-Slanted.otf);
+}
+@font-face {
+  font-family: "heavy";
+  src: url(../fonts/ObjectSans/ObjectSans-Heavy.otf);
+}
+@font-face {
+  font-family: "heavySlanted";
+  src: url(../fonts/ObjectSans/ObjectSans-HeavySlanted.otf);
+}
+
+@mixin flex($align, $justify, $direction: "row") {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
 /*
     Imports
 */
 @import "./global";
+@import "./navigation";
 @import "./intro";
 @import "./work";
 @import "./about";

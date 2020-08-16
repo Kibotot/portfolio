@@ -1,6 +1,26 @@
 /*
     Global variables and functions
 */
+@font-face {
+  font-family: "regular";
+  src: url(../fonts/ObjectSans/ObjectSans-Regular.otf);
+}
+
+@font-face {
+  font-family: "slanted";
+  src: url(../fonts/ObjectSans/ObjectSans-Slanted.otf);
+}
+
+@font-face {
+  font-family: "heavy";
+  src: url(../fonts/ObjectSans/ObjectSans-Heavy.otf);
+}
+
+@font-face {
+  font-family: "heavySlanted";
+  src: url(../fonts/ObjectSans/ObjectSans-HeavySlanted.otf);
+}
+
 /*
     Imports
 */
@@ -142,7 +162,61 @@ svg {
   }
 }
 
-/*
+nav {
+  width: 100vw;
+  height: 10vh;
+  font-family: HeavySlanted;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
+  min-height: 10vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.nav-bar .nav-logo {
+  padding: 1rem 0;
+}
+
+.nav-bar .nav-logo img {
+  height: 5rem;
+}
+
+.nav-bar a {
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+  padding: 1rem 2rem;
+  background-color: #f0a500;
+  text-decoration: none;
+}
+
+.nav-bar a .contact-box {
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+  color: #000000;
+  font-size: 2rem;
+}
+
+.nav-bar a:hover {
+  background-color: #f4f4f4;
+}
+
+@-webkit-keyframes buttonHover {}
+
+@keyframes buttonHover {}/*
     Media Querrys
 */
 /*# sourceMappingURL=style.css.map */

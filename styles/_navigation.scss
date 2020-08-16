@@ -8,7 +8,7 @@ nav {
 .nav-bar {
   @include flex(center, space-between);
   min-height: 10vh;
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
   .nav-logo {
     padding: 1rem 0;

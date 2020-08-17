@@ -17,6 +17,16 @@ body {
   overflow-x: hidden;
 }
 
+#loading-screen {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: map-get($color, "black");
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  animation: dissapear 1s ease-in-out forwards 4s;
+}
+
 #logo {
   position: absolute;
   top: 50%;
@@ -104,5 +114,14 @@ body {
   }
   to {
     fill: #f0a500;
+  }
+}
+
+@keyframes dissapear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }

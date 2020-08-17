@@ -25,4 +25,31 @@
       opacity: 0.2;
     }
   }
+
+  .aboutSection-description-box {
+    min-height: 30vh;
+    .aboutSection-description {
+      font-size: 2.4rem;
+      padding: 2rem 0;
+      width: 75%;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 5vh;
+      // padding-right: 40vw;
+      width: 40%;
+      // background-color: brown;
+      // float: left;
+      li {
+        padding-right: 3rem;
+        list-style-type: none;
+        font-size: 1.8rem;
+        color: map-get($color, "primary");
+        opacity: 0.8;
+        font-family: slanted;
+      }
+    }
+  }
 }

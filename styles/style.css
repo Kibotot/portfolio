@@ -44,6 +44,17 @@ body {
   overflow-x: hidden;
 }
 
+#loading-screen {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #000000;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  -webkit-animation: dissapear 1s ease-in-out forwards 4s;
+          animation: dissapear 1s ease-in-out forwards 4s;
+}
+
 #logo {
   position: absolute;
   top: 50%;
@@ -176,6 +187,24 @@ body {
   }
   to {
     fill: #f0a500;
+  }
+}
+
+@-webkit-keyframes dissapear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dissapear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -417,6 +446,39 @@ nav {
   font-size: 9.3125vw;
   color: #f0a500;
   opacity: 0.2;
+}
+
+.aboutSection-container .aboutSection-description-box {
+  min-height: 30vh;
+}
+
+.aboutSection-container .aboutSection-description-box .aboutSection-description {
+  font-size: 2.4rem;
+  padding: 2rem 0;
+  width: 75%;
+}
+
+.aboutSection-container .aboutSection-description-box ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 5vh;
+  width: 40%;
+}
+
+.aboutSection-container .aboutSection-description-box ul li {
+  padding-right: 3rem;
+  list-style-type: none;
+  font-size: 1.8rem;
+  color: #f0a500;
+  opacity: 0.8;
+  font-family: slanted;
 }
 
 .links {

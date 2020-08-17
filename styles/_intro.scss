@@ -8,6 +8,8 @@ main {
 .main-box {
   width: 100%;
   position: relative;
+  opacity: 0;
+  animation: loadScreen 1s ease-in forwards 5.5s;
 }
 .main-inner {
   position: absolute;
@@ -41,5 +43,14 @@ main {
     font-family: slanted;
     color: map-get($color, "white");
     padding: 2rem 0;
+  }
+}
+
+@keyframes loadScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

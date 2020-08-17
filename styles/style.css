@@ -51,8 +51,8 @@ body {
   position: absolute;
   z-index: 1;
   overflow: hidden;
-  -webkit-animation: dissapear 1s ease-in-out forwards 4s;
-          animation: dissapear 1s ease-in-out forwards 4s;
+  -webkit-animation: disappearBackground 1s ease-in-out forwards 5.5s;
+          animation: disappearBackground 1s ease-in-out forwards 5.5s;
 }
 
 #logo {
@@ -61,8 +61,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: fill 0.5s ease-in forwards 2.6s;
-          animation: fill 0.5s ease-in forwards 2.6s;
+  -webkit-animation: fill 0.5s ease-in forwards 2.6s, disappearText 1s ease-in-out forwards 4s;
+          animation: fill 0.5s ease-in forwards 2.6s, disappearText 1s ease-in-out forwards 4s;
 }
 
 ::-webkit-scrollbar {
@@ -190,7 +190,29 @@ body {
   }
 }
 
-@-webkit-keyframes dissapear {
+@-webkit-keyframes disappearBackground {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+@keyframes disappearBackground {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+@-webkit-keyframes disappearText {
   from {
     opacity: 1;
   }
@@ -199,7 +221,7 @@ body {
   }
 }
 
-@keyframes dissapear {
+@keyframes disappearText {
   from {
     opacity: 1;
   }
@@ -231,6 +253,9 @@ nav {
   min-height: 10vh;
   width: 90%;
   margin: 0 auto;
+  opacity: 0;
+  -webkit-animation: loadNav 1s ease-in forwards 5.5s;
+          animation: loadNav 1s ease-in forwards 5.5s;
 }
 
 .nav-bar .nav-logo {
@@ -262,7 +287,23 @@ nav {
 
 @-webkit-keyframes buttonHover {}
 
-@keyframes buttonHover {}main {
+@keyframes buttonHover {}@-webkit-keyframes loadNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}@keyframes loadNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main {
   font-family: regular;
   min-height: 60vh;
   width: 60%;
@@ -272,6 +313,9 @@ nav {
 .main-box {
   width: 100%;
   position: relative;
+  opacity: 0;
+  -webkit-animation: loadScreen 1s ease-in forwards 5.5s;
+          animation: loadScreen 1s ease-in forwards 5.5s;
 }
 
 .main-inner {
@@ -324,6 +368,24 @@ nav {
   padding: 2rem 0;
 }
 
+@-webkit-keyframes loadScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadScreen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .work {
   min-height: 80vh;
   width: 60%;
@@ -351,6 +413,9 @@ nav {
           flex-direction: "row";
   margin-bottom: 5rem;
   font-size: 5.3125vw;
+  opacity: 0;
+  -webkit-animation: loadTitle 1s ease-in forwards 7s;
+          animation: loadTitle 1s ease-in forwards 7s;
 }
 
 .work-container .work-title .work-title-1 {
@@ -404,6 +469,24 @@ nav {
   z-index: -2;
 }
 
+@-webkit-keyframes loadTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .aboutSection {
   min-height: 60vh;
   font-family: regular;
@@ -424,7 +507,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 60vh;
-  width: 80%;
+  width: 60%;
   margin: 5rem auto;
   color: #f4f4f4;
 }
@@ -488,6 +571,9 @@ nav {
   left: 5vw;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-animation: loadLinks 1s ease-in forwards 6s;
+          animation: loadLinks 1s ease-in forwards 6s;
 }
 
 .links .links-inner {
@@ -521,5 +607,23 @@ nav {
 
 .links .links-inner svg:hover path {
   fill: #f0a500;
+}
+
+@-webkit-keyframes loadLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadLinks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -24,7 +24,7 @@ body {
   position: absolute;
   z-index: 1;
   overflow: hidden;
-  animation: dissapear 1s ease-in-out forwards 4s;
+  animation: disappearBackground 1s ease-in-out forwards 5.5s;
 }
 
 #logo {
@@ -32,7 +32,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fill 0.5s ease-in forwards 2.6s;
+  animation: fill 0.5s ease-in forwards 2.6s,
+    disappearText 1s ease-in-out forwards 4s;
 }
 
 ::-webkit-scrollbar {
@@ -117,7 +118,18 @@ body {
   }
 }
 
-@keyframes dissapear {
+@keyframes disappearBackground {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+@keyframes disappearText {
   from {
     opacity: 1;
   }
@@ -125,3 +137,11 @@ body {
     opacity: 0;
   }
 }
+// @keyframes disappearBackground {
+//   from {
+//     opacity: 1;
+//   }
+//   to {
+//     opacity: 0;
+//   }
+// }

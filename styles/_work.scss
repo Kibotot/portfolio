@@ -11,6 +11,8 @@
     @include flex(flex-start, flex-start);
     margin-bottom: 5rem;
     font-size: 5.3125vw;
+    opacity: 0;
+    animation: loadTitle 1s ease-in forwards 7s;
     .work-title-1 {
       color: map-get($color, "white");
     }
@@ -48,5 +50,14 @@
       overflow: visible;
       z-index: -2;
     }
+  }
+}
+
+@keyframes loadTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

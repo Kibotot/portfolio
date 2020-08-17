@@ -10,6 +10,8 @@ nav {
   min-height: 10vh;
   width: 90%;
   margin: 0 auto;
+  opacity: 0;
+  animation: loadNav 1s ease-in forwards 5.5s;
   .nav-logo {
     padding: 1rem 0;
     img {
@@ -37,4 +39,13 @@ nav {
 
 @keyframes buttonHover {
   //srediti animacije t.d. kreću od lijeva prema desno, ulazak i izlazak (js)
+}
+
+@keyframes loadNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

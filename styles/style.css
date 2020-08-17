@@ -50,7 +50,7 @@ body {
   background: #000000;
   position: absolute;
   z-index: 1;
-  overflow: hidden;
+  overflow-y: hidden;
   -webkit-animation: disappearBackground 1s ease-in-out forwards 5.5s;
           animation: disappearBackground 1s ease-in-out forwards 5.5s;
 }
@@ -562,6 +562,71 @@ main {
   color: #f0a500;
   opacity: 0.8;
   font-family: slanted;
+}
+
+.contactSection {
+  min-height: 40vh;
+}
+
+.contactSectionContainer {
+  min-height: 40vh;
+  width: 60%;
+  margin: 0rem auto 10rem;
+  font-family: regular;
+  color: #f4f4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contactSectionContainer .contactSectionTitle {
+  font-size: 5.3125vw;
+  font-family: heavy;
+}
+
+.contactSectionContainer .contactSectionTitle span {
+  color: #f0a500;
+}
+
+.contactSectionContainer .contactSectionDescription {
+  padding-top: 4rem;
+  font-size: 2.4rem;
+  width: 60%;
+}
+
+.contactSectionContainer .contactSectionDescription span {
+  font-family: heavy;
+}
+
+.contactSectionContainer a {
+  margin-top: 3rem;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+  padding: 1rem 2rem;
+  background-color: #f0a500;
+  font-family: heavy;
+  text-decoration: none;
+}
+
+.contactSectionContainer a .contact-box {
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+  color: #000000;
+  font-size: 2rem;
+}
+
+.contactSectionContainer a:hover {
+  background-color: #f4f4f4;
 }
 
 .links {

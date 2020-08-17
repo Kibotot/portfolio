@@ -1,0 +1,49 @@
+.contactSection {
+  min-height: 40vh;
+}
+
+.contactSectionContainer {
+  min-height: 40vh;
+  width: 60%;
+  margin: 0rem auto 10rem;
+  //   background-color: burlywood;
+  font-family: regular;
+  color: map-get($color, "white");
+  @include flex(flex-start, flex-start, column);
+  .contactSectionTitle {
+    font-size: 5.3125vw;
+    font-family: heavy;
+    span {
+      color: map-get($color, "primary");
+    }
+  }
+  .contactSectionDescription {
+    padding-top: 4rem;
+
+    font-size: 2.4rem;
+    width: 60%;
+    span {
+      font-family: heavy;
+    }
+  }
+  a {
+    margin-top: 3rem;
+    transition: 0.2s ease-in-out all;
+    padding: 1rem 2rem;
+    background-color: map-get($color, "primary");
+    font-family: heavy;
+    text-decoration: none;
+    .contact-box {
+      //   min-height: 5vh;
+      transition: 0.2s ease-in-out all;
+      color: map-get($color, "black");
+      font-size: 2rem;
+    }
+    &:hover {
+      background-color: map-get($color, "white");
+    }
+    // &:hover {
+    //   animation: ease-in 0.2s buttonHover;
+    // }
+  }
+}

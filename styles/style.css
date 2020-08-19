@@ -1,6 +1,9 @@
 /*
     Global variables and functions
 */
+/*
+  font import, 4 styles. Later used inside child component as font-family
+*/
 @font-face {
   font-family: "regular";
   src: url(../fonts/ObjectSans/ObjectSans-Regular.otf);
@@ -22,7 +25,10 @@
 }
 
 /*
-    Imports
+  mixins
+*/
+/*
+    Imports of SCSS components
 */
 * {
   margin: 0;
@@ -44,6 +50,9 @@ body {
   overflow-x: hidden;
 }
 
+/*
+    Loading screen (Jurica Hrg) style & animation properties
+*/
 #loading-screen {
   min-height: 100vh;
   min-width: 100vw;
@@ -56,6 +65,7 @@ body {
 }
 
 #logo {
+  min-height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -63,22 +73,6 @@ body {
           transform: translate(-50%, -50%);
   -webkit-animation: fill 0.5s ease-in forwards 2.6s, disappearText 1s ease-in-out forwards 4s;
           animation: fill 0.5s ease-in forwards 2.6s, disappearText 1s ease-in-out forwards 4s;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #f0a500;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #cf7500;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #000000;
 }
 
 #logo path:nth-child(1) {
@@ -144,13 +138,33 @@ body {
           animation: loading-animation 1.5s ease-in-out forwards 1.6s;
 }
 
+/*
+    Custom scrollbar properties, visible when "loading-screen" animations are active.
+    Tried overflow-y: hidden, no acomplishments
+*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f0a500;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #cf7500;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000000;
+}
+
 @-webkit-keyframes loading-animation {
   0% {
-    stroke: white;
+    stroke: #f4f4f4;
   }
   30% {
     stroke-dashoffset: 0;
-    stroke: white;
+    stroke: #f4f4f4;
   }
   100% {
     stroke-dashoffset: 0;
@@ -160,11 +174,11 @@ body {
 
 @keyframes loading-animation {
   0% {
-    stroke: white;
+    stroke: #f4f4f4;
   }
   30% {
     stroke-dashoffset: 0;
-    stroke: white;
+    stroke: #f4f4f4;
   }
   100% {
     stroke-dashoffset: 0;
@@ -233,7 +247,7 @@ body {
 nav {
   width: 100vw;
   height: 10vh;
-  font-family: HeavySlanted;
+  font-family: Heavy;
 }
 
 .nav-bar {
@@ -250,51 +264,102 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: "row";
           flex-direction: "row";
-  min-height: 10vh;
+  margin: 0rem auto;
   width: 90%;
-  margin: 0 auto;
+  min-height: 10vh;
   opacity: 0;
   -webkit-animation: loadNav 1s ease-in forwards 5.5s;
           animation: loadNav 1s ease-in forwards 5.5s;
 }
 
-.nav-bar .nav-logo {
+.nav-bar .nav-bar-left {
   padding: 1rem 0;
 }
 
-.nav-bar .nav-logo img {
+.nav-bar .nav-bar-left img {
   height: 5rem;
 }
 
-.nav-bar a {
-  -webkit-transition: 0.2s ease-in-out all;
-  transition: 0.2s ease-in-out all;
-  padding: 1rem 2rem;
-  background-color: #f0a500;
+.nav-bar .nav-bar-right {
+  width: 25%;
+}
+
+.nav-bar .nav-bar-right .nav-bar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
+}
+
+.nav-bar .nav-bar-right .nav-bar-list .nav-bar-item {
+  list-style-type: none;
+}
+
+.nav-bar .nav-bar-right .nav-bar-list .nav-bar-item a {
   text-decoration: none;
-}
-
-.nav-bar a .contact-box {
+  font-size: 2rem;
+  color: #f4f4f4;
   -webkit-transition: 0.2s ease-in-out all;
   transition: 0.2s ease-in-out all;
+}
+
+.nav-bar .nav-bar-right .nav-bar-list .nav-bar-item a:hover {
+  color: #f0a500;
+}
+
+#contactMail {
+  padding: 1rem 2rem;
+  color: #f4f4f4;
+  border: 2px solid #f0a500;
+  position: relative;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+#contactMail span {
+  position: relative;
+  z-index: 2;
+}
+
+#contactMail:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #f0a500;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+#contactMail:hover {
   color: #000000;
-  font-size: 2rem;
 }
 
-.nav-bar a:hover {
-  background-color: #f4f4f4;
+#contactMail:hover:after {
+  width: 100%;
 }
 
-@-webkit-keyframes buttonHover {}
-
-@keyframes buttonHover {}@-webkit-keyframes loadNav {
+@-webkit-keyframes loadNav {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
-}@keyframes loadNav {
+}
+
+@keyframes loadNav {
   from {
     opacity: 0;
   }

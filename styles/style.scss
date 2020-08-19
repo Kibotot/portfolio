@@ -8,6 +8,16 @@ $color: (
   "secondary": #cf7500,
 );
 
+$font-size: (
+  "title": 3.6324vw,
+  "workItems": 2.62vw,
+  "paragraph": 1vw,
+  "navigation": 2rem,
+);
+
+/*
+  font import, 4 styles. Later used inside child component as font-family
+*/
 @font-face {
   font-family: "regular";
   src: url(../fonts/ObjectSans/ObjectSans-Regular.otf);
@@ -25,19 +35,28 @@ $color: (
   src: url(../fonts/ObjectSans/ObjectSans-HeavySlanted.otf);
 }
 
+/*
+  mixins
+*/
 @mixin flex($align, $justify, $direction: "row") {
   display: flex;
   align-items: $align;
   justify-content: $justify;
   flex-direction: $direction;
 }
+
+@mixin setWidth($margin: 5rem, $width: 75%) {
+  margin: $margin auto;
+  width: $width;
+}
+// add mixin for button hover
 /*
-    Imports
+    Imports of SCSS components
 */
-@import "./global";
-@import "./navigation";
-@import "./intro";
-@import "./work";
-@import "./about";
-@import "./contact";
-@import "./links";
+@import "./components/global";
+@import "./components/navigation";
+@import "./components/intro";
+@import "./components/work";
+@import "./components/about";
+@import "./components/contact";
+@import "./components/links";

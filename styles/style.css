@@ -451,9 +451,9 @@ nav {
 
 .work {
   min-height: 80vh;
-  width: 60%;
   margin: 5rem auto;
-  font-family: heavyslanted;
+  width: 60%;
+  font-family: heavy;
 }
 
 .work-container {
@@ -474,8 +474,8 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: "row";
           flex-direction: "row";
+  font-size: 3.6324vw;
   margin-bottom: 5rem;
-  font-size: 5.3125vw;
   opacity: 0;
   -webkit-animation: loadTitle 1s ease-in forwards 7s;
           animation: loadTitle 1s ease-in forwards 7s;
@@ -486,13 +486,11 @@ nav {
 }
 
 .work-container .work-title .work-title-2 {
-  color: #f0a500;
-  opacity: 0.35;
+  color: rgba(240, 165, 0, 0.35);
 }
 
 .work-container .work-title .work-title-3 {
-  color: #cf7500;
-  opacity: 0.2;
+  color: rgba(207, 117, 0, 0.2);
 }
 
 .work-container .project {
@@ -506,6 +504,10 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
   margin-bottom: 3rem;
 }
 
@@ -720,7 +722,7 @@ footer h5 {
   min-height: 10vh;
   position: fixed;
   top: 50%;
-  left: 5vw;
+  left: 6vw;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;

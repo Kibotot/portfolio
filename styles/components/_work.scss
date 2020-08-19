@@ -32,7 +32,7 @@
       transition: 0.2s ease-in-out all;
       text-decoration: none;
       color: map-get($color, "white");
-      font-size: 5.2rem;
+      font-size: map-get($font-size, "workItems");
       letter-spacing: 0.1rem;
       cursor: pointer;
       position: relative;

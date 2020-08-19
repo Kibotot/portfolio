@@ -368,7 +368,7 @@ nav {
   }
 }
 
-main {
+.intro {
   font-family: regular;
   min-height: 60vh;
   width: 60%;
@@ -384,10 +384,9 @@ main {
 }
 
 .main-inner {
-  position: absolute;
   min-height: 60vh;
+  margin: 5rem auto;
   width: 100%;
-  margin: 0 auto;
   padding: 10rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,30 +405,29 @@ main {
 
 .main-inner .hello {
   font-size: 2rem;
-  font-family: regular;
   color: #f4f4f4;
 }
 
 .main-inner .name {
   font-family: heavy;
-  font-size: 7.2rem;
-  letter-spacing: 0.07rem;
+  font-size: 3.6324vw;
   color: #f0a500;
+  letter-spacing: 0.07rem;
 }
 
 .main-inner .about {
   font-family: heavy;
-  font-size: 7.2rem;
-  letter-spacing: 0.07rem;
+  font-size: 3.6324vw;
   color: #cf7500;
+  letter-spacing: 0.07rem;
 }
 
 .main-inner .description {
-  letter-spacing: 0.1rem;
-  width: 45%;
-  font-size: 1.6rem;
   font-family: slanted;
+  font-size: 1vw;
   color: #f4f4f4;
+  letter-spacing: 0.1rem;
+  width: 50%;
   padding: 2rem 0;
 }
 

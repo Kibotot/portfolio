@@ -13,6 +13,7 @@ $font-size: (
   "workItems": 2.62vw,
   "paragraph": 1vw,
   "navigation": 2rem,
+  // WARNINIG: shares it's properties with main/ class="hello"
 );
 
 /*
@@ -45,7 +46,7 @@ $font-size: (
   flex-direction: $direction;
 }
 
-@mixin setWidth($margin: 5rem, $width: 75%) {
+@mixin setWidth($margin: 5rem, $width: 60%) {
   margin: $margin auto;
   width: $width;
 }

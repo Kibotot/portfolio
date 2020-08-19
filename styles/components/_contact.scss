@@ -1,60 +1,67 @@
 .contactSection {
-  min-height: 40vh;
+  min-height: 30vh;
 }
 
 .contactSectionContainer {
-  min-height: 40vh;
-  width: 60%;
-  margin: 0rem auto 10rem;
-  //   background-color: burlywood;
+  @include flex(flex-start, flex-start, column);
+  @include setWidth;
   font-family: regular;
   color: map-get($color, "white");
-  @include flex(flex-start, flex-start, column);
+  min-height: 30vh;
   .contactSectionTitle {
-    font-size: 5.3125vw;
+    font-size: map-get($font-size, "title");
     font-family: heavy;
     span {
       color: map-get($color, "primary");
     }
   }
   .contactSectionDescription {
+    font-size: map-get($font-size, "paragraph");
     padding-top: 4rem;
-
-    font-size: 2.4rem;
-    width: 60%;
+    width: 55%;
     span {
       font-family: heavy;
     }
   }
-  a {
-    margin-top: 3rem;
-    transition: 0.2s ease-in-out all;
+  #ContactMail {
+    color: map-get($color, "white");
+    border: 2px solid map-get($color, "primary");
     padding: 1rem 2rem;
-    background-color: map-get($color, "primary");
-    font-family: heavy;
+    margin-top: 2rem;
     text-decoration: none;
-    .contact-box {
-      //   min-height: 5vh;
+    font-size: map-get($font-size, "paragraph");
+    position: relative;
+    transition: 0.2s ease-in-out all;
+    span {
+      position: relative;
+      z-index: 2;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: map-get($color, "primary");
       transition: 0.2s ease-in-out all;
-      color: map-get($color, "black");
-      font-size: 2rem;
     }
     &:hover {
-      background-color: map-get($color, "white");
+      color: map-get($color, "black");
+      &:after {
+        width: 100%;
+      }
     }
-    // &:hover {
-    //   animation: ease-in 0.2s buttonHover;
-    // }
   }
 }
 
 footer {
-  min-height: 10vh;
+  min-height: 7vh;
+  background: #ffffff;
   @include flex(center, center);
   h5 {
-    font-size: 1.2rem;
-    color: map-get($color, "white");
+    font-size: map-get($font-size, "footer");
+    color: rgba(map-get($color, "black"), 0.7);
     font-family: regular;
-    opacity: 0.7;
   }
 }

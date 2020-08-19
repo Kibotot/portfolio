@@ -5,50 +5,32 @@
 
 .aboutSection-container {
   @include flex(flex-start, center, column);
-  min-height: 60vh;
-  width: 60%;
-  margin: 5rem auto;
+  @include setWidth(0rem);
   color: map-get($color, "white");
-  .aboutSection-title {
-    position: relative;
-    #aboutSection-title {
-      font-family: heavy;
-      font-size: 5.3125vw;
-    }
-    h1 span {
-      position: absolute;
-      bottom: -17px;
-      left: 0;
-      z-index: -2;
-      font-size: 9.3125vw;
-      color: map-get($color, "primary");
-      opacity: 0.2;
-    }
+  min-height: 60vh;
+  #aboutSection-title {
+    font-family: heavy;
+    font-size: map-get($font-size, "title");
+    margin-bottom: 5rem;
   }
 
   .aboutSection-description-box {
     min-height: 30vh;
     .aboutSection-description {
-      font-size: 2.4rem;
+      font-size: map-get($font-size, "paragraph");
       padding: 2rem 0;
       width: 75%;
     }
     ul {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      @include flex(center, flex-start);
       min-height: 5vh;
-      // padding-right: 40vw;
-      width: 40%;
-      // background-color: brown;
-      // float: left;
+      width: 50%;
       li {
+        font-family: slanted;
+        font-size: map-get($font-size, "paragraph");
+        color: rgba(map-get($color, "primary"), 0.8);
         padding-right: 3rem;
         list-style-type: none;
-        font-size: 1.8rem;
-        color: map-get($color, "primary");
-        opacity: 0.8;
-        font-family: slanted;
       }
     }
   }

@@ -5,7 +5,7 @@
 }
 
 .work-container {
-  min-height: 100vh;
+  min-height: 80vh;
   .work-title {
     @include flex(flex-start, flex-start);
     font-size: map-get($font-size, "title");

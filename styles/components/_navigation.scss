@@ -1,3 +1,5 @@
+@import "./include-media";
+
 nav {
   width: 100vw;
   height: 10vh;
@@ -65,11 +67,68 @@ nav {
   }
 }
 
+//burger for mobile viewpoint
+.burger {
+  display: none;
+  div {
+    height: 0.2rem;
+    width: 2rem;
+    margin: 0.3rem;
+    align-self: flex-end;
+    background-color: map-get($color, "primary");
+  }
+  .line2 {
+    width: 1.6rem;
+  }
+}
+
+.nav-bar-active {
+  transform: translateX(0%);
+}
 @keyframes loadNav {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .nav-bar {
+    @include setWidth(0rem, 90%);
+    @include flex(center, space-between);
+    min-height: 8vh;
+    #nav-logo {
+      height: 3rem;
+      transform: translateY(10%);
+    }
+    // .nav-bar-right {
+    //   display: none;
+    // }
+    .nav-bar-right {
+      position: absolute;
+      right: 0;
+      top: 8vh;
+      height: 90vh;
+      background: red;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      transform: translateX(100%);
+      transform: transform 0.5s ease-in;
+      .nav-bar-list {
+        min-height: 60vh;
+        margin: auto auto;
+        @include flex(center, space-between, column);
+        .nav-bar-item {
+          opacity: 0;
+        }
+      }
+    }
+    .burger {
+      @include flex(center, flex-end, column);
+      cursor: pointer;
+    }
   }
 }

@@ -59,6 +59,7 @@ footer {
   min-height: 7vh;
   background: #ffffff;
   @include flex(center, center);
+  margin-top: 10rem;
   h5 {
     font-size: map-get($font-size, "footer");
     color: rgba(map-get($color, "black"), 0.7);

@@ -1,25 +1,32 @@
-.aboutSection {
+.about {
   min-height: 60vh;
   font-family: regular;
 }
 
-.aboutSection-container {
+.about-container {
   @include flex(flex-start, center, column);
   @include setWidth(0rem);
   color: map-get($color, "white");
   min-height: 60vh;
-  #aboutSection-title {
+  #about-title {
     font-family: heavy;
     font-size: map-get($font-size, "title");
     margin-bottom: 5rem;
   }
 
-  .aboutSection-description-box {
+  .about-description-box {
     min-height: 30vh;
-    .aboutSection-description {
+    .about-description {
       font-size: map-get($font-size, "paragraph");
       padding: 2rem 0;
       width: 75%;
+      span {
+        a {
+          text-decoration: none;
+          color: map-get($color, "secondary");
+          font-family: heavy;
+        }
+      }
     }
     ul {
       @include flex(center, flex-start);

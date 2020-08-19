@@ -415,7 +415,7 @@ nav {
   letter-spacing: 0.07rem;
 }
 
-.main-inner .about {
+.main-inner .name-about {
   font-family: heavy;
   font-size: 3.6324vw;
   color: #cf7500;
@@ -552,12 +552,12 @@ nav {
   }
 }
 
-.aboutSection {
+.about {
   min-height: 60vh;
   font-family: regular;
 }
 
-.aboutSection-container {
+.about-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -577,23 +577,29 @@ nav {
   min-height: 60vh;
 }
 
-.aboutSection-container #aboutSection-title {
+.about-container #about-title {
   font-family: heavy;
   font-size: 3.6324vw;
   margin-bottom: 5rem;
 }
 
-.aboutSection-container .aboutSection-description-box {
+.about-container .about-description-box {
   min-height: 30vh;
 }
 
-.aboutSection-container .aboutSection-description-box .aboutSection-description {
+.about-container .about-description-box .about-description {
   font-size: 1vw;
   padding: 2rem 0;
   width: 75%;
 }
 
-.aboutSection-container .aboutSection-description-box ul {
+.about-container .about-description-box .about-description span a {
+  text-decoration: none;
+  color: #cf7500;
+  font-family: heavy;
+}
+
+.about-container .about-description-box ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -611,7 +617,7 @@ nav {
   width: 50%;
 }
 
-.aboutSection-container .aboutSection-description-box ul li {
+.about-container .about-description-box ul li {
   font-family: slanted;
   font-size: 1vw;
   color: rgba(240, 165, 0, 0.8);
@@ -716,6 +722,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: "row";
           flex-direction: "row";
+  margin-top: 10rem;
 }
 
 footer h5 {

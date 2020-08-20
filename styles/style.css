@@ -35,12 +35,12 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -317,7 +317,7 @@ nav {
   color: #f0a500;
 }
 
-#contactMail {
+#nav-bar-mail {
   padding: 1rem 2rem;
   color: #f4f4f4;
   border: 2px solid #f0a500;
@@ -326,12 +326,12 @@ nav {
   transition: 0.2s ease-in-out all;
 }
 
-#contactMail span {
+#nav-bar-mail span {
   position: relative;
   z-index: 2;
 }
 
-#contactMail:after {
+#nav-bar-mail:after {
   position: absolute;
   content: "";
   top: 0;
@@ -343,11 +343,11 @@ nav {
   transition: 0.2s ease-in-out all;
 }
 
-#contactMail:hover {
+#nav-bar-mail:hover {
   color: #000000;
 }
 
-#contactMail:hover:after {
+#nav-bar-mail:hover:after {
   width: 100%;
 }
 
@@ -468,6 +468,49 @@ nav {
         -ms-flex-direction: column;
             flex-direction: column;
     cursor: pointer;
+  }
+}
+
+contact box properties #nav-bar-mail {
+  padding: 1rem 2rem;
+  color: #f4f4f4;
+  border: 2px solid #f0a500;
+  position: relative;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+contact box properties #nav-bar-mail span {
+  position: relative;
+  z-index: 2;
+}
+
+contact box properties #nav-bar-mail:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: #f0a500;
+  -webkit-transition: 0.2s ease-in-out all;
+  transition: 0.2s ease-in-out all;
+}
+
+contact box properties #nav-bar-mail:hover {
+  color: #000000;
+}
+
+contact box properties #nav-bar-mail:hover:after {
+  width: 100%;
+}
+
+@keyframes loadNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

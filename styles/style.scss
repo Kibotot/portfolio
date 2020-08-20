@@ -17,6 +17,15 @@ $font-size: (
     "footer": 1.2rem,
 );
 
+$breakpoints: (
+  "phone": 320px,
+  "largePhone": 420px,
+  "tablet": 768px,
+  "laptop": 1366px,
+  "desktop": 1920px,
+  "1440p": 2560px,
+  "2160p": 3840px,
+);
 /*
   font import, 4 styles. Later used inside child component as font-family
 */

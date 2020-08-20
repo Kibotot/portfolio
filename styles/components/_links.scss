@@ -22,6 +22,19 @@
       }
     }
   }
+
+  @media screen and (max-width: map-get($breakpoints, "laptop")) {
+    left: 7vw;
+  }
+  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+    .links-inner {
+      svg {
+        height: 4rem;
+        width: 4rem;
+        margin: 3rem 0rem;
+      }
+    }
+  }
 }
 
 @keyframes loadLinks {

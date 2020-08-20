@@ -40,6 +40,15 @@
     width: 50%;
     padding: 2rem 0;
   }
+  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+    .hello {
+      font-size: 2.8rem;
+    }
+    .name,
+    .name-about {
+      font-size: 4.2324vw;
+    }
+  }
 }
 
 @keyframes loadScreen {

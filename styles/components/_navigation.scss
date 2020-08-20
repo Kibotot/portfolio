@@ -1,5 +1,3 @@
-@import "./include-media";
-
 nav {
   width: 100vw;
   height: 10vh;
@@ -26,7 +24,7 @@ nav {
         list-style-type: none;
         a {
           text-decoration: none;
-          font-size: map-get($font-size, "navigation");
+          font-size: 2rem;
           color: map-get($color, "white");
           transition: 0.2s ease-in-out all;
           &:hover {
@@ -34,6 +32,23 @@ nav {
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: map-get($breakpoints, "laptop")) {
+    @include setWidth(1rem, 90%);
+    .nav-bar-right {
+      width: 30%;
+    }
+  }
+  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+    .nav-bar-right {
+      width: 30%;
+      .nav-bar-item a {
+        font-size: 3rem;
+      }
+    }
+    .nav-bar-left img {
+      height: 7rem;
     }
   }
 }
@@ -91,43 +106,6 @@ nav {
   }
   to {
     opacity: 1;
-  }
-}
-
-// mobile viewport
-@media screen and (max-width: 420px) {
-  .nav-bar {
-    @include setWidth(0rem, 90%);
-    @include flex(center, space-between);
-    min-height: 8vh;
-    #nav-logo {
-      height: 3rem;
-      transform: translateY(10%);
-    }
-    .nav-bar-right {
-      position: absolute;
-      right: 0;
-      top: 8vh;
-      height: 90vh;
-      background: red;
-      width: 80%;
-      display: flex;
-      align-items: center;
-      transform: translateX(100%);
-      transform: transform 0.5s ease-in;
-      .nav-bar-list {
-        min-height: 60vh;
-        margin: auto auto;
-        @include flex(center, space-between, column);
-        .nav-bar-item {
-          opacity: 0;
-        }
-      }
-    }
-    .burger {
-      @include flex(center, flex-end, column);
-      cursor: pointer;
-    }
   }
 }
 

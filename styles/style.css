@@ -317,6 +317,28 @@ nav {
   color: #f0a500;
 }
 
+@media screen and (max-width: 1366px) {
+  .nav-bar {
+    margin: 1rem auto;
+    width: 90%;
+  }
+  .nav-bar .nav-bar-right {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .nav-bar .nav-bar-right {
+    width: 30%;
+  }
+  .nav-bar .nav-bar-right .nav-bar-item a {
+    font-size: 3rem;
+  }
+  .nav-bar .nav-bar-left img {
+    height: 7rem;
+  }
+}
+
 #nav-bar-mail {
   padding: 1rem 2rem;
   color: #f4f4f4;
@@ -388,86 +410,6 @@ nav {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .nav-bar {
-    margin: 0rem auto;
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: "row";
-            flex-direction: "row";
-    min-height: 8vh;
-  }
-  .nav-bar #nav-logo {
-    height: 3rem;
-    -webkit-transform: translateY(10%);
-            transform: translateY(10%);
-  }
-  .nav-bar .nav-bar-right {
-    position: absolute;
-    right: 0;
-    top: 8vh;
-    height: 90vh;
-    background: red;
-    width: 80%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-    -webkit-transform: transform 0.5s ease-in;
-            transform: transform 0.5s ease-in;
-  }
-  .nav-bar .nav-bar-right .nav-bar-list {
-    min-height: 60vh;
-    margin: auto auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .nav-bar .nav-bar-right .nav-bar-list .nav-bar-item {
-    opacity: 0;
-  }
-  .nav-bar .burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    cursor: pointer;
   }
 }
 
@@ -575,6 +517,16 @@ contact box properties #nav-bar-mail:hover:after {
   letter-spacing: 0.1rem;
   width: 50%;
   padding: 2rem 0;
+}
+
+@media screen and (max-width: 2560px) {
+  .main-inner .hello {
+    font-size: 2.8rem;
+  }
+  .main-inner .name,
+  .main-inner .name-about {
+    font-size: 4.2324vw;
+  }
 }
 
 @-webkit-keyframes loadScreen {
@@ -699,7 +651,6 @@ contact box properties #nav-bar-mail:hover:after {
 }
 
 .about {
-  min-height: 60vh;
   font-family: regular;
 }
 
@@ -721,6 +672,25 @@ contact box properties #nav-bar-mail:hover:after {
   width: 60%;
   color: #f4f4f4;
   min-height: 60vh;
+}
+
+@media screen and (max-width: 1366px) {
+  .about-container {
+    min-height: 40vh;
+  }
+  .about-container #about-title {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .about-container .about-description-box .about-description {
+    font-size: 1.3vw;
+    width: 85%;
+  }
+  .about-container .about-description-box ul li {
+    font-size: 1.1vw;
+  }
 }
 
 .about-container #about-title {
@@ -920,6 +890,20 @@ footer h5 {
 
 .links .links-inner svg:hover path {
   fill: #f0a500;
+}
+
+@media screen and (max-width: 1366px) {
+  .links {
+    left: 7vw;
+  }
+}
+
+@media screen and (max-width: 2560px) {
+  .links .links-inner svg {
+    height: 4rem;
+    width: 4rem;
+    margin: 3rem 0rem;
+  }
 }
 
 @-webkit-keyframes loadLinks {

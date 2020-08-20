@@ -1,5 +1,4 @@
 .about {
-  min-height: 60vh;
   font-family: regular;
 }
 
@@ -8,6 +7,25 @@
   @include setWidth(0rem);
   color: map-get($color, "white");
   min-height: 60vh;
+  @media screen and (max-width: map-get($breakpoints, "laptop")) {
+    min-height: 40vh;
+    #about-title {
+      margin-bottom: 3rem;
+    }
+  }
+  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+    .about-description-box {
+      .about-description {
+        font-size: 1.3vw;
+        width: 85%;
+      }
+      ul {
+        li {
+          font-size: 1.1vw;
+        }
+      }
+    }
+  }
   #about-title {
     font-family: heavy;
     font-size: map-get($font-size, "title");

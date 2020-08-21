@@ -6,7 +6,6 @@
   @include flex(flex-start, center, column);
   @include setWidth(0rem);
   color: map-get($color, "white");
-  min-height: 60vh;
   #about-title {
     font-family: heavy;
   }
@@ -40,6 +39,25 @@
   }
   @include sm {
     @include setWidth(0, 70%);
+    .about-container {
+      min-height: 50vh;
+    }
+    #about-title {
+      font-size: 5.24vw;
+    }
+    .about-description {
+      font-size: 1.6rem;
+      width: 100%;
+    }
+    ul li {
+      font-size: 1.4rem;
+    }
+  }
+  @include sm-md {
+    @include setWidth(0, 70%);
+    .about-container {
+      min-height: 50vh;
+    }
     #about-title {
       font-size: 5.24vw;
     }
@@ -69,6 +87,9 @@
     }
   }
   @include lg {
+    .about-container {
+      min-height: 60vh;
+    }
     #about-title {
       font-size: map-get($font-size, "title");
       margin-bottom: 5rem;

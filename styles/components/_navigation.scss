@@ -58,6 +58,20 @@ nav {
       padding: 0.75rem 1.5rem;
     }
   }
+  @include sm-md {
+    .nav-bar-left img {
+      height: 4.5rem;
+    }
+    .nav-bar-right {
+      width: 45%;
+      .nav-bar-item a {
+        font-size: 1.6rem;
+      }
+    }
+    #nav-bar-mail {
+      padding: 0.75rem 1.5rem;
+    }
+  }
   @include md {
     @include setWidth(0rem, 90%);
     .nav-bar-right {

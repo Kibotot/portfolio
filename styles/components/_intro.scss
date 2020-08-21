@@ -1,6 +1,5 @@
 .intro {
   font-family: regular;
-  width: 60%;
   margin: auto;
   @include lg {
     min-height: 60vh;
@@ -8,6 +7,7 @@
   @include md {
     min-height: 60vh;
   }
+
   @include sm {
     width: 100%;
   }
@@ -69,7 +69,43 @@
       font-size: 1.2rem;
     }
   }
+  @include sm-md {
+    .intro {
+      width: 80%;
+    }
+    min-height: 30vh;
+    @include setWidth(0rem, 70%);
+    padding: 5rem 0rem;
+    .hello {
+      font-size: 1.4rem;
+    }
+    .name,
+    .name-about {
+      font-size: 5vw;
+    }
+    .description {
+      width: 80%;
+      font-size: 1.2rem;
+    }
+  }
   @include md {
+    .intro {
+      width: 60%;
+    }
+    min-height: 30vh;
+    @include setWidth(0rem, 70%);
+    padding: 5rem 0rem;
+    .hello {
+      font-size: 1.6rem;
+    }
+    .name,
+    .name-about {
+      font-size: 5.2vw;
+    }
+    .description {
+      width: 80%;
+      font-size: 1.4rem;
+    }
   }
   @include lg {
   }

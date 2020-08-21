@@ -29,9 +29,13 @@
   @include sm {
     display: none;
   }
+  @include sm-md {
+    display: none;
+  }
   @include md {
     left: 6.5vw;
   }
+
   @include lg {
     left: 6vw;
     .links-inner svg {

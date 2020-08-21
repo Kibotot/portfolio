@@ -1,5 +1,5 @@
 .contactSection {
-  min-height: 30vh;
+  // min-height: 30vh;
 }
 
 .contactSectionContainer {
@@ -68,6 +68,19 @@
       font-size: 1.2rem;
     }
   }
+  @include sm-md {
+    @include setWidth($width: 70%);
+    .contactSectionTitle {
+      font-size: 5.2vw;
+    }
+    .contactSectionDescription {
+      font-size: 1.6rem;
+      width: 100%;
+    }
+    #ContactMail {
+      font-size: 1.2rem;
+    }
+  }
   @include md {
     .contactSectionTitle {
       font-size: 5.2vw;
@@ -108,7 +121,6 @@
 }
 
 footer {
-  min-height: 7vh;
   background: #ffffff;
   @include flex(center, center);
   margin-top: 10rem;
@@ -116,25 +128,37 @@ footer {
     font-size: map-get($font-size, "footer");
     color: rgba(map-get($color, "black"), 0.7);
     font-family: regular;
-    @include xxsm {
+  }
+  @include sm {
+    min-height: 10vh;
+    h5 {
+      font-size: 1.2rem;
     }
-    @include xsm {
+  }
+  @include sm-md {
+    min-height: 10vh;
+    h5 {
+      font-size: 1.2rem;
     }
-    @include sm {
-      min-height: 10vh;
-      margin-top: 0;
-      h5 {
-        font-size: 1.2rem;
-      }
+  }
+  @include md {
+    min-height: 7vh;
+    h5 {
+      font-size: 1.4rem;
     }
-    @include md {
-    }
-    @include lg {
-    }
-    @include xlg {
+  }
+  @include lg {
+    min-height: 7vh;
+  }
+  @include xlg {
+    min-height: 7vh;
+    h5 {
       font-size: 2rem;
     }
-    @include xxlg {
+  }
+  @include xxlg {
+    min-height: 7vh;
+    h5 {
       font-size: 3.2rem;
     }
   }

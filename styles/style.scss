@@ -76,6 +76,12 @@ $breakpoints: (
     @content;
   }
 }
+@mixin sm-md {
+  @media (max-width: map-get($breakpoints, "laptop")-1) {
+    @content;
+  }
+}
+
 @mixin md {
   @media (min-width: map-get($breakpoints, "laptop")) {
     @content;

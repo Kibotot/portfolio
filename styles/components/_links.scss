@@ -22,16 +22,38 @@
       }
     }
   }
-
-  @media screen and (max-width: map-get($breakpoints, "laptop")) {
-    left: 7vw;
+  @include xxsm {
   }
-  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+  @include xsm {
+  }
+  @include sm {
+    display: none;
+  }
+  @include md {
+    left: 6.5vw;
+  }
+  @include lg {
+    left: 6vw;
+    .links-inner svg {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+  @include xlg {
     .links-inner {
       svg {
         height: 4rem;
         width: 4rem;
         margin: 3rem 0rem;
+      }
+    }
+  }
+  @include xxlg {
+    .links-inner {
+      svg {
+        height: 6rem;
+        width: 6rem;
+        margin: 4rem 0rem;
       }
     }
   }

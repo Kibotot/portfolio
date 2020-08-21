@@ -24,7 +24,7 @@ nav {
         list-style-type: none;
         a {
           text-decoration: none;
-          font-size: 2rem;
+          // font-size: 2rem;
           color: map-get($color, "white");
           transition: 0.2s ease-in-out all;
           &:hover {
@@ -34,21 +34,73 @@ nav {
       }
     }
   }
-  @media screen and (max-width: map-get($breakpoints, "laptop")) {
-    @include setWidth(1rem, 90%);
+
+  /*    
+  
+  MEDIA QUEIRS    
+  
+  */
+  @include xxsm {
+  }
+  @include xsm {
+  }
+  @include sm {
+    .nav-bar-left img {
+      height: 4.5rem;
+    }
     .nav-bar-right {
-      width: 30%;
+      width: 45%;
+      .nav-bar-item a {
+        font-size: 1.6rem;
+      }
+    }
+    #nav-bar-mail {
+      padding: 0.75rem 1.5rem;
     }
   }
-  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+  @include md {
+    @include setWidth(0rem, 90%);
     .nav-bar-right {
-      width: 30%;
+      width: 25%;
+      .nav-bar-item a {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  @include lg {
+    .nav-bar-right {
+      width: 20%;
+      .nav-bar-item a {
+        font-size: 2.4rem;
+      }
+    }
+    .nav-bar-left img {
+      height: 5rem;
+    }
+  }
+  @include xlg {
+    .nav-bar-right {
+      width: 25%;
       .nav-bar-item a {
         font-size: 3rem;
       }
     }
     .nav-bar-left img {
       height: 7rem;
+    }
+  }
+  @include xxlg {
+    #nav-bar-mail {
+      padding: 2rem 3rem;
+    }
+    .nav-bar-right {
+      width: 25%;
+      .nav-bar-item a {
+        font-size: 4.2rem;
+      }
+    }
+    .nav-bar-left img {
+      height: 10rem;
     }
   }
 }
@@ -96,45 +148,8 @@ nav {
     width: 1.6rem;
   }
 }
-
 .nav-bar-active {
   transform: translateX(0%);
-}
-@keyframes loadNav {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-contact box properties #nav-bar-mail {
-  padding: 1rem 2rem;
-  color: map-get($color, "white");
-  border: 2px solid map-get($color, "primary");
-  position: relative;
-  transition: 0.2s ease-in-out all;
-  span {
-    position: relative;
-    z-index: 2;
-  }
-  &:after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: map-get($color, "primary");
-    transition: 0.2s ease-in-out all;
-  }
-  &:hover {
-    color: map-get($color, "black");
-    &:after {
-      width: 100%;
-    }
-  }
 }
 
 @keyframes loadNav {

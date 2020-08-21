@@ -7,13 +7,85 @@
   @include setWidth(0rem);
   color: map-get($color, "white");
   min-height: 60vh;
-  @media screen and (max-width: map-get($breakpoints, "laptop")) {
-    min-height: 40vh;
-    #about-title {
-      margin-bottom: 3rem;
+  #about-title {
+    font-family: heavy;
+  }
+
+  .about-description-box {
+    min-height: 30vh;
+    .about-description {
+      padding: 2rem 0;
+      span {
+        a {
+          text-decoration: none;
+          color: map-get($color, "secondary");
+          font-family: heavy;
+        }
+      }
+    }
+    ul {
+      @include flex(center, flex-start);
+      min-height: 5vh;
+      li {
+        font-family: slanted;
+        color: rgba(map-get($color, "primary"), 0.8);
+        padding-right: 3rem;
+        list-style-type: none;
+      }
     }
   }
-  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+  @include xxsm {
+  }
+  @include xsm {
+  }
+  @include sm {
+    @include setWidth(0, 70%);
+    #about-title {
+      font-size: 5.24vw;
+    }
+    .about-description {
+      font-size: 1.6rem;
+      width: 100%;
+    }
+    ul li {
+      font-size: 1.4rem;
+    }
+  }
+  @include md {
+    min-height: 40vh;
+    #about-title {
+      font-size: 5.2vw;
+      margin-bottom: 3rem;
+    }
+    .about-description {
+      font-size: 1.6rem;
+      width: 80%;
+    }
+    ul {
+      width: 50%;
+      li {
+        font-size: map-get($font-size, "paragraph");
+      }
+    }
+  }
+  @include lg {
+    #about-title {
+      font-size: map-get($font-size, "title");
+      margin-bottom: 5rem;
+    }
+    .about-description {
+      font-size: map-get($font-size, "paragraph");
+      width: 75%;
+    }
+    ul {
+      width: 50%;
+      li {
+        font-size: map-get($font-size, "paragraph");
+      }
+    }
+  }
+  @include xlg {
+    min-height: 50vh;
     .about-description-box {
       .about-description {
         font-size: 1.3vw;
@@ -26,37 +98,6 @@
       }
     }
   }
-  #about-title {
-    font-family: heavy;
-    font-size: map-get($font-size, "title");
-    margin-bottom: 5rem;
-  }
-
-  .about-description-box {
-    min-height: 30vh;
-    .about-description {
-      font-size: map-get($font-size, "paragraph");
-      padding: 2rem 0;
-      width: 75%;
-      span {
-        a {
-          text-decoration: none;
-          color: map-get($color, "secondary");
-          font-family: heavy;
-        }
-      }
-    }
-    ul {
-      @include flex(center, flex-start);
-      min-height: 5vh;
-      width: 50%;
-      li {
-        font-family: slanted;
-        font-size: map-get($font-size, "paragraph");
-        color: rgba(map-get($color, "primary"), 0.8);
-        padding-right: 3rem;
-        list-style-type: none;
-      }
-    }
+  @include xxlg {
   }
 }

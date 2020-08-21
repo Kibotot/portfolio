@@ -1,8 +1,16 @@
 .intro {
   font-family: regular;
-  min-height: 60vh;
   width: 60%;
   margin: auto;
+  @include lg {
+    min-height: 60vh;
+  }
+  @include md {
+    min-height: 60vh;
+  }
+  @include sm {
+    width: 100%;
+  }
 }
 
 .main-box {
@@ -40,13 +48,51 @@
     width: 50%;
     padding: 2rem 0;
   }
-  @media screen and (max-width: map-get($breakpoints, "1440p")) {
+
+  @include xxsm {
+  }
+  @include xsm {
+  }
+  @include sm {
+    min-height: 30vh;
+    @include setWidth(0rem, 70%);
+    padding: 5rem 0rem;
+    .hello {
+      font-size: 1.4rem;
+    }
+    .name,
+    .name-about {
+      font-size: 5vw;
+    }
+    .description {
+      width: 80%;
+      font-size: 1.2rem;
+    }
+  }
+  @include md {
+  }
+  @include lg {
+  }
+  @include xlg {
     .hello {
       font-size: 2.8rem;
     }
     .name,
     .name-about {
       font-size: 4.2324vw;
+    }
+  }
+  @include xxlg {
+    .hello {
+      font-size: 3.6rem;
+    }
+    .name,
+    .name-about {
+      font-size: 4.4324vw;
+    }
+    .description {
+      font-size: 4.2rem;
+      width: 70%;
     }
   }
 }

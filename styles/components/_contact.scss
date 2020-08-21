@@ -9,7 +9,6 @@
   color: map-get($color, "white");
   min-height: 30vh;
   .contactSectionTitle {
-    font-size: map-get($font-size, "title");
     font-family: heavy;
     span {
       color: map-get($color, "primary");
@@ -18,7 +17,6 @@
   .contactSectionDescription {
     font-size: map-get($font-size, "paragraph");
     padding-top: 4rem;
-    width: 55%;
     span {
       font-family: heavy;
     }
@@ -53,6 +51,60 @@
       }
     }
   }
+  @include xxsm {
+  }
+  @include xsm {
+  }
+  @include sm {
+    @include setWidth($width: 70%);
+    .contactSectionTitle {
+      font-size: 5.2vw;
+    }
+    .contactSectionDescription {
+      font-size: 1.6rem;
+      width: 100%;
+    }
+    #ContactMail {
+      font-size: 1.2rem;
+    }
+  }
+  @include md {
+    .contactSectionTitle {
+      font-size: 5.2vw;
+    }
+    .contactSectionDescription {
+      font-size: 1.6rem;
+    }
+  }
+  @include lg {
+    .contactSectionTitle {
+      font-size: map-get($font-size, "title");
+    }
+    .contactSectionDescription {
+      width: 55%;
+    }
+  }
+  @include xlg {
+    .contactSectionTitle {
+      font-size: 5.2vw;
+    }
+    .contactSectionDescription {
+      font-size: 1.3vw;
+    }
+    #ContactMail {
+      margin-top: 3rem;
+    }
+  }
+  @include xxlg {
+    .contactSectionDescription {
+      font-size: 4.2rem;
+      width: 60%;
+    }
+    #ContactMail {
+      padding: 2rem 3rem;
+      margin-top: 5rem;
+    }
+  }
 }
 
 footer {
@@ -64,5 +116,26 @@ footer {
     font-size: map-get($font-size, "footer");
     color: rgba(map-get($color, "black"), 0.7);
     font-family: regular;
+    @include xxsm {
+    }
+    @include xsm {
+    }
+    @include sm {
+      min-height: 10vh;
+      margin-top: 0;
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
+    @include md {
+    }
+    @include lg {
+    }
+    @include xlg {
+      font-size: 2rem;
+    }
+    @include xxlg {
+      font-size: 3.2rem;
+    }
   }
 }

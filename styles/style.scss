@@ -60,6 +60,42 @@ $breakpoints: (
   margin: $margin auto;
   width: $width;
 }
+
+@mixin xxsm {
+  @media (max-width: map-get($breakpoints, "phone")) {
+    @content;
+  }
+}
+@mixin xsm {
+  @media (max-width: map-get($breakpoints, "largePhone")) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "tablet")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: map-get($breakpoints, "laptop")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: map-get($breakpoints, "dekstop")) {
+    @content;
+  }
+}
+@mixin xlg {
+  @media (min-width: map-get($breakpoints, "1440p")) {
+    @content;
+  }
+}
+@mixin xxlg {
+  @media (min-width: map-get($breakpoints, "2160p")) {
+    @content;
+  }
+}
 // add mixin for button hover
 /*
     Imports of SCSS components
@@ -71,4 +107,3 @@ $breakpoints: (
 @import "./components/about";
 @import "./components/contact";
 @import "./components/links";
-@import "./components/include-media";

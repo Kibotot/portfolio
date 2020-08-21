@@ -2,6 +2,10 @@
   min-height: 80vh;
   @include setWidth;
   font-family: heavy;
+  @include sm {
+    @include setWidth(0, 70%);
+    min-height: 60vh;
+  }
 }
 
 .work-container {
@@ -46,6 +50,61 @@
       overflow: visible;
       z-index: -2;
     }
+  }
+
+  @include xxsm {
+  }
+  @include xsm {
+  }
+  @include sm {
+    min-height: 60vh;
+    .work-title {
+      font-size: 4.3vw;
+    }
+    .project {
+      min-height: 10vh;
+      .project-title,
+      .project-title a {
+        font-size: 3.6vw;
+      }
+      .stripes {
+        display: none;
+      }
+      .project-box {
+        position: absolute;
+        height: 10vh;
+        width: 70vw;
+        z-index: -2;
+      }
+      // .project-box-1 {
+      //   background: gray;
+      //   opacity: 0.7;
+      // }
+      &:nth-child(2) {
+        background: #636363b2;
+      }
+
+      &:nth-child(3) {
+        background: #ba2626b2;
+      }
+      &:nth-child(4) {
+        background: #408e1cb2;
+      }
+      &:nth-child(5) {
+        background: #5f2090b2;
+      }
+    }
+  }
+  @include md {
+    .stripes {
+      width: 100%;
+    }
+  }
+  @include lg {
+  }
+  @include xlg {
+  }
+  @include xxlg {
   }
 }
 

@@ -24,11 +24,20 @@ nav {
         list-style-type: none;
         a {
           text-decoration: none;
-          // font-size: 2rem;
+          font-size: 2rem;
           color: map-get($color, "white");
           transition: 0.2s ease-in-out all;
           &:hover {
             color: map-get($color, "primary");
+          }
+          @include md {
+            font-size: 1.6rem;
+          }
+          @include xlg {
+            font-size: 3rem;
+          }
+          @include xxlg {
+            font-size: 3.6rem;
           }
         }
       }
@@ -40,9 +49,30 @@ nav {
   MEDIA QUEIRS    
   
   */
-  @include xxsm {
-  }
-  @include xsm {
+
+  // // @include sm-md {
+  // //   .nav-bar-left img {
+  // //     height: 4.5rem;
+  // //   }
+  // //   .nav-bar-right {
+  // //     width: 45%;
+  // //     .nav-bar-item a {
+  // //       font-size: 1.6rem;
+  // //     }
+  // //   }
+  // //   #nav-bar-mail {
+  // //     padding: 0.75rem 1.5rem;
+  // //   }
+  // // }
+
+  @include md {
+    @include setWidth(0rem, 90%);
+    .nav-bar-right {
+      width: 25%;
+      .nav-bar-item a {
+        font-size: 1.6rem;
+      }
+    }
   }
   @include sm {
     .nav-bar-left img {
@@ -58,46 +88,27 @@ nav {
       padding: 0.75rem 1.5rem;
     }
   }
-  @include sm-md {
-    .nav-bar-left img {
-      height: 4.5rem;
-    }
-    .nav-bar-right {
-      width: 45%;
-      .nav-bar-item a {
-        font-size: 1.6rem;
-      }
-    }
-    #nav-bar-mail {
-      padding: 0.75rem 1.5rem;
-    }
-  }
-  @include md {
-    @include setWidth(0rem, 90%);
-    .nav-bar-right {
-      width: 25%;
-      .nav-bar-item a {
-        font-size: 1.6rem;
-      }
-    }
-  }
+  // @include xsm {
+  // }
+  // @include xxsm {
+  // }
+
   @include lg {
     .nav-bar-right {
       width: 20%;
-      .nav-bar-item a {
-        font-size: 2.4rem;
+      .nav-bar-item {
+        a {
+          font-size: 2.4rem;
+        }
       }
     }
     .nav-bar-left img {
-      height: 5rem;
+      height: 10rem;
     }
   }
   @include xlg {
     .nav-bar-right {
       width: 25%;
-      .nav-bar-item a {
-        font-size: 3rem;
-      }
     }
     .nav-bar-left img {
       height: 7rem;

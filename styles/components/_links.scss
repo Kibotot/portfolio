@@ -22,19 +22,17 @@
       }
     }
   }
-  @include xxsm {
-  }
-  @include xsm {
-  }
-  @include sm {
-    display: none;
-  }
-  @include sm-md {
-    display: none;
-  }
   @include md {
     left: 6.5vw;
   }
+
+  @include sm {
+    display: none;
+  }
+  // @include xsm {
+  // }
+  // @include xxsm {
+  // }
 
   @include lg {
     left: 6vw;

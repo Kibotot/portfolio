@@ -9,9 +9,9 @@ $color: (
 );
 
 $font-size: (
-  "title": 3.6324vw,
-  "workItems": 2.62vw,
-  "paragraph": 1vw,
+  "title": 5.2rem,
+  "workItems": 3.2rem,
+  "paragraph": 1.8rem,
   "navigation": 2rem,
   // WARNINIG: shares it's properties with main/ class="hello"
     "footer": 1.2rem,
@@ -71,19 +71,15 @@ $breakpoints: (
     @content;
   }
 }
+
 @mixin sm {
   @media (max-width: map-get($breakpoints, "tablet")) {
     @content;
   }
 }
-@mixin sm-md {
-  @media (max-width: map-get($breakpoints, "laptop")-1) {
-    @content;
-  }
-}
 
 @mixin md {
-  @media (min-width: map-get($breakpoints, "laptop")) {
+  @media (max-width: map-get($breakpoints, "laptop")) {
     @content;
   }
 }

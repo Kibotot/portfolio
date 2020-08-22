@@ -2,11 +2,11 @@
   min-height: 80vh;
   @include setWidth;
   font-family: heavy;
+  // @include sm-md {
+  //   @include setWidth(0, 70%);
+  //   min-height: 60vh;
+  // }
   @include sm {
-    @include setWidth(0, 70%);
-    min-height: 60vh;
-  }
-  @include sm-md {
     @include setWidth(0, 70%);
     min-height: 60vh;
   }
@@ -16,7 +16,7 @@
   min-height: 80vh;
   .work-title {
     @include flex(flex-start, flex-start);
-    font-size: map-get($font-size, "title");
+    font-size: 8.2rem;
     margin-bottom: 5rem;
     opacity: 0;
     animation: loadTitle 1s ease-in forwards 7s;
@@ -29,6 +29,15 @@
     .work-title-3 {
       color: rgba(map-get($color, "secondary"), 0.2);
     }
+    @include md {
+      font-size: 5.2rem;
+    }
+    @include xlg {
+      font-size: 10rem;
+    }
+    @include xxlg {
+      font-size: 12rem;
+    }
   }
 
   .project {
@@ -40,10 +49,19 @@
       transition: 0.2s ease-in-out all;
       text-decoration: none;
       color: map-get($color, "white");
-      font-size: map-get($font-size, "workItems");
+      font-size: 3.8rem;
       letter-spacing: 0.1rem;
       cursor: pointer;
       position: relative;
+      @include md {
+        font-size: 3.2rem;
+      }
+      @include xlg {
+        font-size: 6.2rem;
+      }
+      @include xxlg {
+        font-size: 8.2rem;
+      }
     }
     h1 a:hover {
       color: map-get($color, "primary");
@@ -56,10 +74,12 @@
     }
   }
 
-  @include xxsm {
+  @include md {
+    .stripes {
+      width: 100%;
+    }
   }
-  @include xsm {
-  }
+
   @include sm {
     min-height: 60vh;
     .work-title {
@@ -96,53 +116,14 @@
       }
     }
   }
-  @include sm-md {
-    min-height: 60vh;
-    .work-title {
-      font-size: 4.3vw;
-    }
-    .project {
-      min-height: 10vh;
-      .project-title,
-      .project-title a {
-        font-size: 3.6vw;
-      }
-      .stripes {
-        display: none;
-      }
-      .project-box {
-        position: absolute;
-        height: 10vh;
-        width: 70vw;
-        z-index: -2;
-      }
-
-      &:nth-child(2) {
-        background: #636363b2;
-      }
-
-      &:nth-child(3) {
-        background: #ba2626b2;
-      }
-      &:nth-child(4) {
-        background: #408e1cb2;
-      }
-      &:nth-child(5) {
-        background: #5f2090b2;
-      }
-    }
-  }
-  @include md {
-    .stripes {
-      width: 100%;
-    }
-  }
-  @include lg {
-  }
-  @include xlg {
-  }
-  @include xxlg {
-  }
+  // @include xsm {
+  // }
+  // @include xxsm {
+  // }
+  // @include lg {
+  // }
+  // @include xlg {
+  // }
 }
 
 @keyframes loadTitle {
@@ -153,3 +134,40 @@
     opacity: 1;
   }
 }
+
+// // @include sm-md {
+// //   min-height: 60vh;
+// //   .work-title {
+// //     font-size: 4.3vw;
+// //   }
+// //   .project {
+// //     min-height: 10vh;
+// //     .project-title,
+// //     .project-title a {
+// //       font-size: 3.6vw;
+// //     }
+// //     .stripes {
+// //       display: none;
+// //     }
+// //     .project-box {
+// //       position: absolute;
+// //       height: 10vh;
+// //       width: 70vw;
+// //       z-index: -2;
+// //     }
+
+// //     &:nth-child(2) {
+// //       background: #636363b2;
+// //     }
+
+// //     &:nth-child(3) {
+// //       background: #ba2626b2;
+// //     }
+// //     &:nth-child(4) {
+// //       background: #408e1cb2;
+// //     }
+// //     &:nth-child(5) {
+// //       background: #5f2090b2;
+// //     }
+// //   }
+// // }

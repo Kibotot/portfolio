@@ -1,15 +1,16 @@
 .intro {
   font-family: regular;
   margin: auto;
-  @include lg {
-    min-height: 60vh;
-  }
-  @include md {
-    min-height: 60vh;
-  }
+  min-height: 60vh;
 
+  @include md {
+    min-height: 30vh;
+  }
   @include sm {
     width: 100%;
+  }
+  @include lg {
+    min-height: 60vh;
   }
 }
 
@@ -21,37 +22,73 @@
 }
 .main-inner {
   min-height: 60vh;
-  @include setWidth($width: 100%);
+  @include setWidth($width: 60%);
   padding: 10rem 0;
   @include flex(flex-start, center, column);
   .hello {
     font-size: map-get($font-size, "navigation");
     color: map-get($color, "white");
+    @include md {
+      font-size: 1.4rem;
+    }
   }
   .name {
     font-family: heavy;
-    font-size: map-get($font-size, "title");
+    font-size: 8.2rem;
     color: map-get($color, "primary");
     letter-spacing: 0.07rem;
+    @include md {
+      font-size: 5.2rem;
+    }
   }
   .name-about {
     font-family: heavy;
-    font-size: map-get($font-size, "title");
+    font-size: 8.2rem;
     color: map-get($color, "secondary");
     letter-spacing: 0.07rem;
+    @include md {
+      font-size: 5.2rem;
+    }
   }
   .description {
     font-family: slanted;
-    font-size: map-get($font-size, "paragraph");
+    font-size: 2.2rem;
     color: map-get($color, "white");
     letter-spacing: 0.1rem;
     width: 50%;
     padding: 2rem 0;
+    @include md {
+      width: 80%;
+      font-size: 1.2rem;
+    }
+
+    @include xlg {
+      font-size: 2.4rem;
+    }
+    @include xxlg {
+      font-size: 3.2rem;
+    }
   }
 
-  @include xxsm {
-  }
-  @include xsm {
+  @include md {
+    .intro {
+      width: 60%;
+      min-height: 30vh;
+    }
+
+    @include setWidth(0rem, 60%);
+    padding: 5rem 0rem;
+    .hello {
+      font-size: 1.4rem;
+    }
+    // .name,
+    // .name-about {
+    //   font-size: 5vw;
+    // }
+    .description {
+      width: 80%;
+      font-size: 1.2rem;
+    }
   }
   @include sm {
     min-height: 30vh;
@@ -69,46 +106,20 @@
       font-size: 1.2rem;
     }
   }
-  @include sm-md {
-    .intro {
-      width: 80%;
-    }
-    min-height: 30vh;
-    @include setWidth(0rem, 70%);
-    padding: 5rem 0rem;
-    .hello {
-      font-size: 1.4rem;
-    }
-    .name,
-    .name-about {
-      font-size: 5vw;
-    }
-    .description {
-      width: 80%;
-      font-size: 1.2rem;
-    }
+  @include xsm {
   }
-  @include md {
-    .intro {
-      width: 60%;
-    }
-    min-height: 30vh;
-    @include setWidth(0rem, 70%);
-    padding: 5rem 0rem;
-    .hello {
-      font-size: 1.6rem;
-    }
-    .name,
-    .name-about {
-      font-size: 5.2vw;
-    }
-    .description {
-      width: 80%;
-      font-size: 1.4rem;
-    }
+  @include xxsm {
   }
-  @include lg {
-  }
+
+  // @include lg {
+  //   .hello {
+  //     font-size: 2.8rem;
+  //   }
+  //   .name,
+  //   .name-about {
+  //     font-size: 8.2rem;
+  //   }
+  // }
   @include xlg {
     .hello {
       font-size: 2.8rem;
@@ -141,3 +152,23 @@
     opacity: 1;
   }
 }
+
+//   // @include sm-md {
+//   //   .intro {
+//   //     width: 80%;
+//   //   }
+//   //   min-height: 30vh;
+//   //   @include setWidth(0rem, 70%);
+//   //   padding: 5rem 0rem;
+//   //   .hello {
+//   //     font-size: 1.4rem;
+//   //   }
+//   //   .name,
+//   //   .name-about {
+//   //     font-size: 5vw;
+//   //   }
+//   //   .description {
+//   //     width: 80%;
+//   //     font-size: 1.2rem;
+//   //   }
+//   // }

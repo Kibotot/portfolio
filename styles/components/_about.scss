@@ -87,8 +87,21 @@
       font-size: 1.4rem;
     }
   }
-  // @include xsm {
-  // }
+  @include xsm {
+    .about-description-box {
+      .about-description {
+        font-size: 1.4rem;
+        width: 90%;
+      }
+    }
+    #about-title {
+      font-size: 3.2rem;
+    }
+
+    ul li {
+      font-size: 1.2rem;
+    }
+  }
   // @include xxsm {
   // }
   @include lg {

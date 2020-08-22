@@ -96,8 +96,15 @@
       font-size: 1.2rem;
     }
   }
-  // @include xsm {
-  // }
+  @include xsm {
+    .contactSectionTitle {
+      font-size: 3.2rem;
+    }
+    .contactSectionDescription {
+      font-size: 1.4rem;
+      width: 90%;
+    }
+  }
   // @include xxsm {
   // }
 

@@ -2,6 +2,7 @@
   font-family: regular;
   margin: auto;
   min-height: 60vh;
+  z-index: 2;
 
   @include md {
     min-height: 30vh;
@@ -16,7 +17,6 @@
 
 .main-box {
   width: 100%;
-  position: relative;
   opacity: 0;
   animation: loadScreen 1s ease-in forwards 5.5s;
 }

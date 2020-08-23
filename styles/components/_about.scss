@@ -4,7 +4,7 @@
 
 .about-container {
   @include flex(flex-start, center, column);
-  @include setWidth(0rem, 70%);
+  @include setWidth(0rem, 60%);
   min-height: 50vh;
   color: map-get($color, "white");
   #about-title {

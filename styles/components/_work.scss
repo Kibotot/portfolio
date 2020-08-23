@@ -20,14 +20,26 @@
     margin-bottom: 5rem;
     opacity: 0;
     animation: loadTitle 1s ease-in forwards 7s;
+    @include xsm {
+      margin-bottom: 3rem;
+    }
     .work-title-1 {
       color: map-get($color, "white");
+      @include xsm {
+        font-size: 3.8rem;
+      }
     }
     .work-title-2 {
       color: rgba(map-get($color, "primary"), 0.35);
+      @include xsm {
+        display: none;
+      }
     }
     .work-title-3 {
       color: rgba(map-get($color, "secondary"), 0.2);
+      @include xsm {
+        display: none;
+      }
     }
     @include md {
       font-size: 5.2rem;
@@ -55,6 +67,9 @@
       position: relative;
       @include md {
         font-size: 3.2rem;
+      }
+      @include xsm {
+        font-size: 1.8rem;
       }
       @include xlg {
         font-size: 6.2rem;
@@ -90,9 +105,6 @@
       .project-title,
       .project-title a {
         font-size: 3.6vw;
-        @include xsm {
-          font-size: 1.8rem;
-        }
       }
       .stripes {
         display: none;
